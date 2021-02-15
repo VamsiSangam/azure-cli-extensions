@@ -1,0 +1,333 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: GET
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/rasivagu-iscsi-datastore?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/rasivagu-iscsi-datastore","name":"rasivagu-iscsi-datastore","properties":{"diskPoolVolume":{"endpoints":["10.45.0.4:3260"],"lunName":"lun0"},"provisioningState":"Succeeded"},"type":"Microsoft.AVS/privateClouds/clusters/datastores"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '408'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:35 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"netAppVolume": {"nfsProviderIp": "10.50.1.4", "nfsFilePath":
+      "ANFVol1FilePath"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '98'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud --nfs-file-path --nfs-provider-ip
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: PUT
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1","name":"ANFDatastore1","properties":{"netAppVolume":{"nfsFilePath":"ANFVol1FilePath","nfsProviderIp":"10.50.1.4"},"provisioningState":"Pending"},"type":"Microsoft.AVS/privateClouds/clusters/datastores"}'
+    headers:
+      azure-asyncoperation:
+      - https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/dae3c3ba-0dde-4873-a6c1-789591dc6a8b?api-version=2021-01-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '394'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:35 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud --nfs-file-path --nfs-provider-ip
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: GET
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/dae3c3ba-0dde-4873-a6c1-789591dc6a8b?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"endTime":"2021-02-15T10:49:39.0132127+00:00","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/dae3c3ba-0dde-4873-a6c1-789591dc6a8b","name":"dae3c3ba-0dde-4873-a6c1-789591dc6a8b","percentComplete":100,"startTime":"2021-02-15T10:49:36.4203661+00:00","status":"Succeeded"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '430'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:46 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud --nfs-file-path --nfs-provider-ip
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: GET
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1","name":"ANFDatastore1","properties":{"netAppVolume":{"nfsFilePath":"ANFVol1FilePath","nfsProviderIp":"10.50.1.4"},"provisioningState":"Building"},"type":"Microsoft.AVS/privateClouds/clusters/datastores"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '395'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:47 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: GET
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1","name":"ANFDatastore1","properties":{"netAppVolume":{"nfsFilePath":"ANFVol1FilePath","nfsProviderIp":"10.50.1.4"},"provisioningState":"Building"},"type":"Microsoft.AVS/privateClouds/clusters/datastores"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '395'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:49 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore delete
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: DELETE
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1","name":"ANFDatastore1","properties":{"netAppVolume":{"nfsFilePath":"ANFVol1FilePath","nfsProviderIp":"10.50.1.4"},"provisioningState":"Building"},"type":"Microsoft.AVS/privateClouds/clusters/datastores"}'
+    headers:
+      azure-asyncoperation:
+      - https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/b7c39e01-8624-45f9-9911-5a856b20bab2?api-version=2021-01-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '395'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:49:50 GMT
+      expires:
+      - '-1'
+      location:
+      - https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationresults/b7c39e01-8624-45f9-9911-5a856b20bab2?api-version=2021-01-01-preview
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14998'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vmware datastore delete
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group --cluster --private-cloud
+      User-Agent:
+      - AZURECLI/2.19.1 azsdk-python-avsclient/unknown Python/3.8.7 (Windows-10-10.0.18362-SP0)
+    method: GET
+    uri: https://eastus2euap.management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/b7c39e01-8624-45f9-9911-5a856b20bab2?api-version=2021-01-01-preview
+  response:
+    body:
+      string: '{"endTime":"2021-02-15T10:49:57.4090943+00:00","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rasivagu-cloudsan-rg/providers/Microsoft.AVS/privateClouds/rasivagu-sddc/clusters/Cluster-1/datastores/ANFDatastore1/operationstatuses/b7c39e01-8624-45f9-9911-5a856b20bab2","name":"b7c39e01-8624-45f9-9911-5a856b20bab2","percentComplete":100,"startTime":"2021-02-15T10:49:50.6552196+00:00","status":"Succeeded"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '430'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 15 Feb 2021 10:50:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
