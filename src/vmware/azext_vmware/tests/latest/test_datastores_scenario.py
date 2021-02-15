@@ -21,6 +21,9 @@ class VmwareDatastoresScenarioTest(ScenarioTest):
         # Get a pre-created iSCSI datastore
         self.cmd('az vmware datastore show --name rasivagu-iscsi-datastore --resource-group rasivagu-cloudsan-rg --cluster Cluster-1 --private-cloud rasivagu-sddc')
 
+        # List all existing datastores
+        self.cmd('az vmware datastore list --resource-group rasivagu-cloudsan-rg --cluster Cluster-1 --private-cloud rasivagu-sddc')
+
         # Create a new ANF based datastore
         self.cmd('az vmware datastore create --name ANFDatastore1 --resource-group rasivagu-cloudsan-rg --cluster Cluster-1 --private-cloud rasivagu-sddc --nfs-file-path ANFVol1FilePath --nfs-provider-ip 10.50.1.4')
 
